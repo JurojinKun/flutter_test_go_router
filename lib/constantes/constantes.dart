@@ -1,0 +1,11 @@
+const String welcome = "welcome";
+const String login = "login";
+const String register = "register";
+const String forgotPassword = "forgotPassword";
+const String home = "home";
+const String search = "search";
+const String notifications = "notifications";
+const String profile = "profile";
+const String settings = "settings";
+const String activities = "activities";
+const String validateUser = "validateUser";
