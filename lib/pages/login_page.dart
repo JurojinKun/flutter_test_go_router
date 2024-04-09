@@ -32,9 +32,7 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () async {
                   SharedPreferences prefs =
                       await SharedPreferences.getInstance();
-                  await prefs.setString("token", "tokenTest");
-                  if (!mounted) return;
-                  context.goNamed(home);
+                  await prefs.setString("token", "tokenTest").then((value) => context.goNamed(home));
                 },
                 child: const Text("Login")),
             const SizedBox(height: 10),

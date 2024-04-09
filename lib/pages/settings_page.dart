@@ -37,9 +37,7 @@ class _SettingsPageState extends State<SettingsPage> {
               icon: const Icon(Icons.logout),
               onPressed: () async {
                 SharedPreferences prefs = await SharedPreferences.getInstance();
-                await prefs.remove("token");
-                if (!mounted) return;
-                context.goNamed(welcome);
+                await prefs.remove("token").then((value) => context.goNamed(welcome));
               },
             ),
           ],
